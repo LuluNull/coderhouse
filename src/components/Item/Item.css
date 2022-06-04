@@ -1,0 +1,21 @@
+.item {
+    height:200px;
+    width: 170px;
+    padding: 10px;
+    margin: 10px;
+    background-color: pink;
+    border: 2px solid palevioletred
+
+    
+  };
+
+.cont {
+    height:100px;
+    width: 10px;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+}
+
