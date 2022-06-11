@@ -5,10 +5,9 @@ const Navbar = () => {
     return (
             
         <nav className='navbar'>
-            <Button buttonName='New In'/>
-            <Button buttonName='Ropa'/>
-            <Button buttonName='Accesorios'/>
-            <Button buttonName='Make up'/>
+            <Button buttonName='New In' category = 'newin'/>
+            <Button buttonName='Accesorios' category = 'misc'/>
+            <Button buttonName='Make up' category = 'makeup'/>
         </nav>
     )
 }

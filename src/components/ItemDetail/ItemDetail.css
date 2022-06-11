@@ -1,0 +1,21 @@
+.itemDetail {
+    width: 35%;
+    height: 60%;
+    background-color: pink;
+    display:inline-block;
+    border: 1px solid palevioletred;
+    border-radius: 10px;
+}
+
+.cont1 {
+    height:50%;
+    width: 50%;
+    display:inline-block;
+}
+
+.img0 {
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    border: 1px solid palevioletred;
+}

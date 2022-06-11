@@ -1,24 +1,25 @@
 import './ItemContainer.css'
-import { getProducts } from '../AsyncMock'
+import { getProducts, getProductsByCategory } from '../AsyncMock'
 import { useState, useEffect } from 'react'
 import ItemList from '../../components/ItemList/ItemList';
+import { useParams } from 'react-router-dom'
 
 const ItemContainer = (props) => {
     const [products, setProducts] = useState([])
 
-    useEffect(() => {
-        getProducts().then(response => {
-            setProducts(response)
-        })
-    }, [])
+    const params = useParams();
 
-    const productsComponents = products.map(product => {
-        return (
-            <li key={product.id}>
-                {product.name}
-            </li>
-        )
-    })
+    useEffect(() => {
+        if (params.category !== undefined) {
+            getProductsByCategory(params.category).then(response => {
+                setProducts(response)
+            })
+        } else {
+            getProducts().then(response => {
+                setProducts(response)
+            })
+        }
+    }, [params.category])
 
     return (
         <nav className='itemcont'>
