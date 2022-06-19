@@ -1,6 +1,6 @@
 .itemDetail {
     width: 35%;
-    height: 60%;
+    height: 70%;
     background-color: pink;
     display:inline-block;
     border: 1px solid palevioletred;
@@ -8,7 +8,7 @@
 }
 
 .cont1 {
-    height:50%;
+    height:250px;
     width: 50%;
     display:inline-block;
 }

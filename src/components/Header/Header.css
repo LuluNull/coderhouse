@@ -20,3 +20,14 @@
     margin: 20px; 
     flex: 1;
 }
+
+.test {
+    flex: 1;
+    color: palevioletred;
+}
+
+
+
+.test2 {
+    display: flex;
+}
