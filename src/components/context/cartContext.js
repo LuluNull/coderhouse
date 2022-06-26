@@ -21,9 +21,21 @@ export const CartProvider = ({ children }) => {
     }
 
     const removeItem = (id) => {
-        const newCart = cart.filter(prod => prod.id !== id)
-        setCart(newCart)
+        let newCart = cart.map(item => ({ ...item }))
+        newCart.forEach(item => {
+            if (item.item.id === id) {
+                if (item.quantity > 1) {
+                    item.quantity = item.quantity - 1
+                }
+                else {
+                    newCart = newCart.filter(item => item.item.id !== id)
+                }
+            }
+        })
+
+        setCart([...newCart])
     }
+
 
     const getCartQuantity = () => {
         const quantities = cart.map(e => e.quantity)

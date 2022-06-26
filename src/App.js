@@ -1,4 +1,3 @@
-
 import './App.css';
 import Header from './components/Header/Header';
 import ItemContainer from './components/ItemContainer/ItemContainer';
@@ -18,7 +17,7 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<ItemContainer greeting='Lulú' />} />
-            <Route path='/categories/:category' element={<ItemContainer greeting='Lulú' />} />
+            <Route path='/categories/:categoryID' element={<ItemContainer greeting='Lulú' />} />
             <Route path='/detail/:productID' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
           </Routes>
